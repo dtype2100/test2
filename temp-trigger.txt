@@ -1,1 +1,1 @@
-Trigger the temporary public Whisper small.en model ferry workflow.
+Trigger the temporary public Whisper large-v3-turbo model ferry workflow.
