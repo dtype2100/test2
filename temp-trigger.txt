@@ -1,0 +1,1 @@
+Trigger split transfer of the temporary public Whisper large-v3-turbo model.
