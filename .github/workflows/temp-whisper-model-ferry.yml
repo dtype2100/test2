@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/temp-whisper-model-ferry.yml'
+  pull_request:
+    paths:
+      - 'temp-trigger.txt'
   workflow_dispatch:
 
 jobs:
