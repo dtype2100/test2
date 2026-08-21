@@ -13,18 +13,18 @@ jobs:
   download-model:
     runs-on: ubuntu-latest
     steps:
-      - name: Download public Whisper small.en q5_1 model
+      - name: Download public Whisper large-v3-turbo q5_0 model
         run: |
           set -euo pipefail
           curl -L --fail --retry 5 --retry-delay 2 \
-            'https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.en-q5_1.bin' \
-            -o ggml-small.en-q5_1.bin
-          stat -c '%n %s bytes' ggml-small.en-q5_1.bin
-          sha256sum ggml-small.en-q5_1.bin
+            'https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q5_0.bin' \
+            -o ggml-large-v3-turbo-q5_0.bin
+          stat -c '%n %s bytes' ggml-large-v3-turbo-q5_0.bin
+          sha256sum ggml-large-v3-turbo-q5_0.bin
       - name: Upload model artifact
         uses: actions/upload-artifact@v4
         with:
-          name: whisper-small-en-q5_1
-          path: ggml-small.en-q5_1.bin
+          name: whisper-large-v3-turbo-q5_0
+          path: ggml-large-v3-turbo-q5_0.bin
           compression-level: 0
           retention-days: 1
